@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.header`
   display: flex;
@@ -13,31 +13,35 @@ export const Nav = styled.nav`
 `
 
 export const LinkWrapper = styled.div`
-  margin-left: 20px;
-  margin-right: 20px;
+  ${({ theme }) => css`
+    margin-left: ${theme.spacings.medium};
+    margin-right: ${theme.spacings.medium};
+  `}
 `
 
 export const Link = styled.a`
-  font-weight: 300;
-  font-size: 20px;
-  margin: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #e1e1e1;
-  position: relative;
+  ${({ theme }) => css`
+    font-weight: ${theme.font.normal};
+    font-size: ${theme.font.sizes.large};
+    color: ${theme.colors.white};
+    margin: ${theme.spacings.medium};
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
 
-  ::before {
-    position: absolute;
-    bottom: -10px;
-    content: '';
-    height: 0;
-    width: 0;
-    border: 1px solid transparent;
-  }
+    ::before {
+      position: absolute;
+      bottom: -10px;
+      content: '';
+      height: 0;
+      width: 0;
+      border: 1px solid transparent;
+    }
 
-  :hover::before {
-    width: 100%;
-    border-color: #15f008;
-    transition: ease-in-out 0.2s;
-  }
+    :hover::before {
+      width: 100%;
+      border-color: ${theme.colors.primary};
+      transition: ${theme.transition.default};
+    }
+  `}
 `
