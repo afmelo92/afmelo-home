@@ -1,9 +1,20 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.header`
-  display: flex;
-  height: 80px;
-  width: 100%;
+  ${({ theme }) => css`
+    z-index: ${theme.layers.menu};
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(18, 18, 18, 0.85) 100%
+    );
+  `}
 `
 export const Nav = styled.nav`
   width: 100%;
