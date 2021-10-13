@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Container = styled.div`
   border: 2px solid red;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: -80px;
 `
 export const Logo = styled.div`
   background: url('/logo.svg') no-repeat center;
@@ -22,13 +23,20 @@ export const Logo = styled.div`
 `
 
 export const Presentation = styled.div`
-  height: fit-content;
-  width: 100%;
-  justify-content: space-evenly;
-  margin: auto;
-  line-height: 80px;
-  display: flex;
-  flex-direction: row;
+  ${() => css`
+    height: fit-content;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    line-height: 80px;
+    display: flex;
+    flex-direction: row;
+
+    ${media.lessThan('medium')`
+      flex-direction: column;
+      align-items: center;
+    `}
+  `}
 `
 
 export const Greeting = styled.div`
@@ -56,7 +64,7 @@ export const Greeting = styled.div`
 
 export const Details = styled.div`
   ${({ theme }) => css`
-    width: 600px;
+    max-width: 600px;
 
     h1 {
       font-weight: 200;

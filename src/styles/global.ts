@@ -27,12 +27,6 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${theme.colors.mainBg};
     }
 
-    html,
-    body,
-    #__next {
-      height: 100%;
-    }
-
     body {
       color: ${theme.colors.white};
       font-family: ${theme.font.family};
