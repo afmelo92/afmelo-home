@@ -6,7 +6,7 @@ export const Container = styled.header`
     border: 1px solid green;
     z-index: ${theme.layers.menu};
     display: flex;
-    height: 80px;
+    min-height: 80px;
     width: 100%;
     position: sticky;
     top: 0;
