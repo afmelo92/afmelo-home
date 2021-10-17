@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Logo from 'components/Logo'
 import Link from 'next/link'
 
 import * as S from './styles'
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           </Link>
         </S.LinkWrapper>
 
-        <Image src="/logo.svg" width={50} height={50} />
+        <Logo />
 
         <S.LinkWrapper>
           <Link href="/" passHref>
