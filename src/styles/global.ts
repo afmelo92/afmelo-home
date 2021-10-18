@@ -31,6 +31,10 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.white};
       font-family: ${theme.font.family};
     }
+
+    a {
+      cursor: pointer;
+    }
   `}
 `
 

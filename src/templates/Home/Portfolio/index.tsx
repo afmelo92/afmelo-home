@@ -1,9 +1,9 @@
 import React from 'react'
 
-// import { Container } from './styles';
+import * as S from './styles'
 
 const HomePortfolioTemplate: React.FC = () => {
-  return <div />
+  return <S.Main>PORTFOLIO MAIN</S.Main>
 }
 
 export default HomePortfolioTemplate

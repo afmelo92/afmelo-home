@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Presentation = styled.div`
+export const Main = styled.div`
   ${() => css`
-    border: 1px solid green;
     width: 100%;
-    height: 100%;
+    min-height: calc(100vh - 160px);
     justify-content: space-evenly;
     margin: auto;
     line-height: 80px;
@@ -43,6 +42,7 @@ export const Greeting = styled.div`
 
     ${media.lessThan('medium')`
       padding-left: ${theme.spacings.small};
+      margin-bottom: -150px;
 
       h1 {
         font-size: ${theme.font.sizes.huge}
@@ -105,4 +105,20 @@ export const Details = styled.div`
       }
     `}
   `}
+`
+export const Social = styled.section`
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    margin: 0 20px;
+    transition: margin 500ms ease-in;
+
+    :hover {
+      margin-bottom: 15px;
+    }
+  }
 `

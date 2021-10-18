@@ -3,7 +3,6 @@ import media from 'styled-media-query'
 
 export const Container = styled.header`
   ${({ theme }) => css`
-    border: 1px solid green;
     z-index: ${theme.layers.menu};
     display: flex;
     min-height: 80px;
